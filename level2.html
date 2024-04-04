@@ -39,6 +39,7 @@
         </textarea>
 
 
+
     <a href="index.html">
         <homebutton>Home</homebutton>
     </a>
@@ -48,6 +49,75 @@
     <a href="quiz2.html">
         <quiz2button>Take the Quiz</quiz2button>
     </a>
+
+   <div id="componentLibrary">
+        <h3>
+            <text font-size="20px">Component Library <br> </text>
+        </h3>
+
+        <div id="battery" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+
+            <img src="BatteryICONright.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31"> 
+          
+        </div> 
+
+        <div id="lightbulb" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+
+            <img src="LightOFF.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31"> 
+          
+        </div> 
+
+        <div id="resistor" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+
+            <img src="Resistor.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31"> 
+          
+        </div> 
+          
+
+   </div>
+
+   <script> 
+
+    <!--Sets data type and value of the dragged data-->
+    function allowDrop(ev) { 
+    
+      ev.preventDefault(); 
+    
+    } 
+    
+    function drag(ev) { 
+    
+      ev.dataTransfer.setData("object", ev.target.id); 
+    
+    } 
+    
+      
+    function drop(ev) { 
+    
+      ev.preventDefault(); 
+    
+      var data = ev.dataTransfer.getData("object"); 
+    
+      ev.target.appendChild(document.getElementById(data)); 
+    
+      var droppedImage = new Image();
+           droppedImage.src = data;
+            
+            var correctImage = event.target.getAttribute("data-correct-image");
+            
+            if (correctImage && data.endsWith(correctImage + ".jpg")) {
+                event.target.appendChild(droppedImage);
+                alert("Correct image dropped in the correct box!");
+            } else {
+                alert("Incorrect image or box!");
+            }
+    
+    } 
+    
+    </script> 
+    
+    
+
 </body>
 
 </html>
