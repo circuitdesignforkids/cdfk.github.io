@@ -22,7 +22,7 @@ h2 {
     line-height: normal;
 }
 
-homebutton {
+leftbottombutton {
     background-color: #A349A3;
     color: #FFF;
     height: 5%;
@@ -39,7 +39,7 @@ homebutton {
     left: 10px;
 }
 
-level1button {
+centerbottombutton {
     background-color: #3F47CC;
     color: #FFF;
     height: 5%;
@@ -57,7 +57,7 @@ level1button {
     margin-left: -15%;
 }
 
-quiz2button {
+rightbottombutton {
     background-color: #8ACB00;
     color: #FFF;
     height: 5%;
@@ -80,6 +80,6 @@ textarea {
     position: fixed;
     bottom: 10%;
     left: 23%;
-    right:23%;
+    right: 23%;
     margin-left: auto;
 }
