@@ -3,10 +3,13 @@
 <head> 
 <style> 
 
-.grid-container {
+.grid-container{
   display: inline-grid;
   grid-template-columns: auto auto auto;
   background-color: #2196F3;
+  width: 700px;
+  height: 500px;
+  padding: 10px;
 }
 .grid-item {
   display: inline-grid;
@@ -112,7 +115,7 @@ function drop(ev) {
 
 <body> 
 
-<!---<div class = "grid-container">--->
+<div class = "grid-container">
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> 
 
   <img src="BatteryICONright.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31"> 
@@ -120,7 +123,7 @@ function drop(ev) {
 </div> 
 
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" class="grid-item"></div> 
-<div id="wire" class="grid-container"></div> 
+<div id="wire"></div> 
 <div class="div6" ondrop="drop(event)" ondragover="allowDrop(event)" ></div> 
 
 </body> 
