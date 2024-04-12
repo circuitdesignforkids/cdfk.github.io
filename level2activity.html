@@ -1,6 +1,43 @@
 <!DOCTYPE html>
 <html>
+<style>
+.grid-container{
+  z-index: 1;
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto;
+  background-color: #2196F3;
+  width: 700px;
+  height: 500px;
+  padding: 10px;
+}
+.grid-item{
+    display: inline-grid;
+}
+#dropbox{
+  z-index: 3;
+  position: relative; 
+  float: left; 
+  width: 100px; 
+  height: 35px; 
+  margin: 75px; 
+  border: 1px #8ACB00;
+}
 
+ #wire{ 
+
+z-index: 2;
+  width: 550px; 
+
+  height: 300px; 
+
+  border: 5px #B29EB2;
+
+  padding: 10px; 
+
+  margin: 10px; 
+
+} 
+</style>
 <head>
     <title>Level 2</title>
     <link rel="stylesheet" href="level2.css">
@@ -48,6 +85,49 @@
     <a href="quiz2.html">
         <rightbottombutton>Take the Quiz</rightbottombutton>
     </a>
-</body>
 
+    <div class="gird-container">
+    </div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" class="grid-item"></div>
+    <div id="wire" class="grid-item"></div> 
+</body>
+<script>
+
+<!--Sets data type and value of the dragged data-->
+function allowDrop(ev) { 
+
+  ev.preventDefault(); 
+
+} 
+
+function drag(ev) { 
+
+  ev.dataTransfer.setData("object", ev.target.id); 
+
+} 
+
+
+    function drop(ev) { 
+
+ev.preventDefault(); 
+
+var data = ev.dataTransfer.getData("object"); 
+
+ev.target.appendChild(document.getElementById(data)); 
+
+var droppedImage = new Image();
+     droppedImage.src = data;
+      
+     <!---Commented out right and wrong box function for testing need help understanding javascript syntax for this--->
+      var correctImage = event.target.getAttribute("data-correct-image");
+      
+     <!---if (correctImage && data.endsWith(correctImage + ".jpg")) {--->
+        <!---event.target.appendChild(droppedImage);--->
+         <!---alert("Correct image dropped in the correct box!");--->
+      <!---} else {--->
+          <!---alert("Incorrect image or box!");--->
+      <!---}--->
+
+} 
+</script>
 </html>
