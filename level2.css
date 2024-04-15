@@ -109,7 +109,7 @@ textarea {
 #box2{
     z-index: 3;
     grid-column: cuatro / seis;
-    grid-row: lunes / martes;
+    grid-row: sabado / domingo;
     border: 3px solid #FFF;
 }
 #box3{
