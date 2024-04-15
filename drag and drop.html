@@ -9,6 +9,7 @@
   grid-template-columns: [uno] 100px [dos] 200px [tres] 200px [cuatro] 200px [cinco] 100px;
   grid-template-rows:[lunes] 50px [martes] 50px [miercoles] 100px [jueves] 100px [viernes] 100px [sabado] 50px [domingo] 50px;
   background-color: #2196F3;
+  grid-template-areas: "header";
 }
 .grid-item {
   display: inline-grid;
@@ -31,23 +32,19 @@
   background-color: #2196F3
 }
 
-#div2{ 
+.div2{ 
 
   z-index: 3;
-  position: absolute; 
+  grid-area: header | uno / lunes;
+  <!--position: absolute;-->
   background-color:black;
   border: 4px pink;
-  float: right; 
+  <!---float: right;--->
   <!---grid-row-start: 3;--->
   <!--grid-row-end: 4;--->
   <!--grid-column-start:2;--->
   <!---grid-column-end:3;--->
-  width: 100px; 
-  height: 35px;
-
   <!---margin: 75px;---> 
-
-  padding: 10px; 
 } 
 
 #div6 { 
