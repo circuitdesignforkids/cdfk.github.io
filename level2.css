@@ -112,9 +112,9 @@ textarea {
 }
 #box2{
     z-index: 3;
-    grid-column:uno;
-    <!---grid-column-end:tres;--->
-    grid-row-start:miercoless;
+    grid-column-start:uno;
+    grid-column-end:tres;
+    grid-row-start:miercoles;
     grid-row-end:viernes;
     border: 3px solid #FFF;
 }
