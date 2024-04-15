@@ -86,10 +86,10 @@ textarea {
 
 .grid-container{
     display: inline-grid;
-    grid-template-columns: [uno] 50px [dos] 100px [tres] 100px [cuatro] 100px [cinco] 100px [seis] 100px [seite] 100px [ocho] 100px [nueve] 100px [deis] 50px;
-    grid-template-rows:[lunes] 50px [martes] 50px [miercoles] 100px [jueves] 100px [viernes] 100px [sabado] 50px [domingo] 50px;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-template-columns: [uno] 25px [dos] 50px [tres] 100px [cuatro] 300px [cinco] 50px [seis] 100px [seite] 200px [ocho] 100px [nueve] 50px [deis] 25px;
+    grid-template-rows: [lunes] 50px [martes] 50px [miercoles] 100px [jueves] 100px [viernes] 100px [sabado] 50px [domingo] 50px;
+    <!---grid-column-gap: 10px;--->
+    <!---grid-row-gap: 10px;--->
     <!---background-color: #2196F3;--->
     margin: 10px;
   }
@@ -99,10 +99,8 @@ textarea {
 #wire{  
     position: relative;
     z-index: 2;
-    grid-column-start: dos; 
-    grid-column-end: deis;
-    grid-row-start: miercoles;
-    grid-row-end: sabado;
+    grid-column: tres / ocho; 
+    grid-row: miercoles / sabado;
     border: 5px solid #A349A3; 
 }
 #box1{
