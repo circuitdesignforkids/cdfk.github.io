@@ -101,7 +101,7 @@ textarea {
 }
 #box1{
     z-index: 3;
-    grid-column: uno / span 2;
+    grid-column: nueve / span 2;
     grid-row: miercoles / span 1;
     border: 3px solid #3F47CC;
     background: #000000e3;
