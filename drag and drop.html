@@ -33,7 +33,6 @@
 }
 
 #div2{ 
-
   z-index: 3;
   grid-column: uno / span 1;
   grid-row: sabado / span 1;
@@ -110,15 +109,15 @@ function drop(ev) {
 <body> 
 
 <div class = "grid-container">
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+<div id ="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> 
 
   <img src="BatteryICONright.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31"> 
 
 </div> 
 
-<div class = "div2" ondrop="drop(event)" ondragover="allowDrop(event)" class="grid-item"></div> 
-<div id="wire" class="grid-item"></div> 
-<div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)" class="grid-item"></div> 
+<div id = "div2" ondrop="drop(event)" ondragover="allowDrop(event)" class="grid-item"></div> 
+<div id ="wire" class="grid-item"></div> 
+<div id ="div6" ondrop="drop(event)" ondragover="allowDrop(event)" class="grid-item"></div> 
 
 </body> 
 
