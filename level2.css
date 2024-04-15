@@ -112,8 +112,8 @@ textarea {
 }
 #box2{
     z-index: 3;
-    grid-column-start:uno;
-    grid-column-end:tres;
+    grid-column:uno;
+    <!---grid-column-end:tres;--->
     grid-row-start:miercoless;
     grid-row-end:viernes;
     border: 3px solid #FFF;
