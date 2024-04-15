@@ -104,8 +104,7 @@ textarea {
 }
 #box1{
     z-index: 3;
-    grid-column-start: dos;
-    grid-column-end: cinco;
+    grid-column-start: dos / span 1;
     grid-row-start: sabado;
     grid-row-end: domingo;
     border: 3px solid #3F47CC;
