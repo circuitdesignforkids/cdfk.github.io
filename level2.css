@@ -103,7 +103,7 @@ textarea {
     border: 5px solid #A349A3; 
 }
 #box1{
-    z-index: 3;
+    z-index: 4;
     grid-column-start: dos;
     grid-column-end: cinco;
     grid-row-start: lunes;
