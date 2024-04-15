@@ -93,10 +93,16 @@ textarea {
   }
 
 #wire{  
-    z-index: 5;
+    z-index: 2;
     grid-column-start: dos; 
     grid-column-end: deis;
     grid-row-start: miercoles;
     grid-row-end: sabado;
     border: 5px solid #A349A3; 
+}
+#bat{
+    z-index: 3;
+    grid-column: dos;
+    grid-row: martes;
+    border: 3px solid #3F47CC;
 }
