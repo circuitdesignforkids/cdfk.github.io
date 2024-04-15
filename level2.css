@@ -91,7 +91,9 @@ textarea {
     <!---background-color: #2196F3;--->
     margin: 10px;
   }
-
+.grid-item{
+    display: inline-grid;
+}
 #wire{  
     z-index: 2;
     grid-column-start: dos; 
