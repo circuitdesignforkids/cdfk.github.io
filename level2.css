@@ -101,8 +101,8 @@ textarea {
 }
 #box1{
     z-index: 3;
-    grid-column: nueve / span 1;
-    grid-row: miercoles / span 1;
+    grid-column: nueve / deis;
+    grid-row: miercoles / jueves;
     border: 3px solid #3F47CC;
     background: #000000e3;
 }
