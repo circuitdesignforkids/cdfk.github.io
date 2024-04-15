@@ -100,9 +100,10 @@ textarea {
     grid-row-end: sabado;
     border: 5px solid #A349A3; 
 }
-#bat{
+#box1{
     z-index: 3;
-    grid-column-start: dos;
+    grid-column-start: cuatro;
+    grid-column-end: cinco;
     grid-row-start: martes;
     grid-row-end: miercoles;
     border: 3px solid #3F47CC;
