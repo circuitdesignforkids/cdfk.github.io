@@ -106,14 +106,14 @@ textarea {
     z-index: 4;
     grid-column-start: dos;
     grid-column-end: cinco;
-    grid-row-start: lunes;
-    grid-row-end: martes;
+    grid-row-start: sabado;
+    grid-row-end: domingo;
     border: 3px solid #3F47CC;
 }
 #box2{
     z-index: 3;
-    grid-column-start:uno;
-    grid-column-end:tres;
+    grid-column-start:seite;
+    grid-column-end:deis;
     grid-row-start:miercoles;
     grid-row-end:viernes;
     border: 3px solid #FFF;
