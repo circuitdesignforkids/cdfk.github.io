@@ -104,15 +104,15 @@ textarea {
 }
 #box1{
     z-index: 3;
-    grid-column-start: dos / span 1;
+    grid-column: dos / span 1;
     grid-row-start: sabado;
     grid-row-end: domingo;
     border: 3px solid #3F47CC;
+    background: #000000e3;
 }
 #box2{
     z-index: 3;
-    grid-column-start: seite;
-    grid-column-end: deis;
+    grid-column: seite / span 1;
     grid-row-start: miercoles;
     grid-row-end: viernes;
     border: 3px solid #FFF;
@@ -123,4 +123,5 @@ textarea {
     grid-column-end: dos;
     grid-row-start: viernes;
     grid-row-end: sabado;
+    border: 3px solid #8ACB00;
 }
