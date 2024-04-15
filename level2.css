@@ -103,7 +103,7 @@ textarea {
     border: 5px solid #A349A3; 
 }
 #box1{
-    z-index: 4;
+    z-index: 3;
     grid-column-start: dos;
     grid-column-end: cinco;
     grid-row-start: sabado;
@@ -112,12 +112,16 @@ textarea {
 }
 #box2{
     z-index: 3;
-    grid-column-start:seite;
-    grid-column-end:deis;
-    grid-row-start:miercoles;
-    grid-row-end:viernes;
+    grid-column-start: seite;
+    grid-column-end: deis;
+    grid-row-start: miercoles;
+    grid-row-end: viernes;
     border: 3px solid #FFF;
 }
 #box3{
     z-index: 3;
+    grid-column-start:uno;
+    grid-column-end: dos;
+    grid-row-start: viernes;
+    grid-row-end: sabado;
 }
