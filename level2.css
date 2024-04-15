@@ -95,6 +95,7 @@ textarea {
     display: inline-grid;
 }
 #wire{  
+    position: relative;
     z-index: 2;
     grid-column-start: dos; 
     grid-column-end: deis;
@@ -103,8 +104,9 @@ textarea {
     border: 5px solid #A349A3; 
 }
 #box1{
+    position relative;
     z-index: 3;
-    grid-column: dos / span 1;
+    grid-column: uno / span 1;
     grid-row: lunes / span 1;
     border: 3px solid #3F47CC;
     background: #000000e3;
