@@ -104,7 +104,18 @@ textarea {
     z-index: 3;
     grid-column-start: cuatro;
     grid-column-end: cinco;
-    grid-row-start: miercoles;
+    grid-row-start: lunes;
     grid-row-end: jueves;
     border: 3px solid #3F47CC;
+}
+#box2{
+    z-index: 3;
+    grid-column-start:uno;
+    grid-column-end:tres;
+    grid-row-start:miercoless;
+    grid-row-end:viernes;
+    border: 3px solid #FFF;
+}
+#box3{
+    z-index: 3;
 }
