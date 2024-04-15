@@ -102,7 +102,7 @@ textarea {
     grid-row-end: sabado;
     border: 5px solid #A349A3; 
 }
-.box1{
+#box1{
     z-index: 3;
     grid-column-start: cuatro;
     grid-column-end: cinco;
