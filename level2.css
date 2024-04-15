@@ -102,7 +102,7 @@ textarea {
 }
 #bat{
     z-index: 3;
-    grid-column: dos;
+    grid-column-start: dos;
     grid-row-start: martes;
     grid-row-end: miercoles;
     border: 3px solid #3F47CC;
