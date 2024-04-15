@@ -7,7 +7,7 @@
   z-index: 1;
   display: inline-grid;
   grid-template-columns: [uno] 25px [dos] 50px [tres] 50px [cuatro] 200px [cinco] 50px [seis] 50px [seite] 200px [ocho] 200px [nueve] 50px [deis] 50px;
-  grid-template-rows:[lunes] 25px [martes] 50px [miercoles] 50px [jueves] 100px [viernes] 300px [sabado] 50px [domingo] 50px;
+  grid-template-rows:[lunes] 25px [martes] 50px [miercoles] 50px [jueves] 100px [viernes] 200px [sabado] 50px [domingo] 50px;
   background-color: #2196F3;
  <!--grid-template-areas: "header";-->
 }
@@ -47,15 +47,9 @@
 
 #div6 { 
   z-index: 3;
-
-  width: 100px; 
-
-  height: 35px; 
-
-  padding: 10px; 
-
-  border: 1px solid black; 
-
+  grid-column: ocho / span 2;
+  grid-row: jueves;
+  border: 3px solid green; 
 } 
 
 </style> 
