@@ -104,7 +104,7 @@ textarea {
     border: 5px solid #A349A3; 
 }
 #box1{
-    position relative;
+    position: relative;
     z-index: 3;
     grid-column: uno / span 1;
     grid-row: lunes / span 1;
@@ -112,6 +112,7 @@ textarea {
     background: #000000e3;
 }
 #box2{
+    position: relative;
     z-index: 3;
     grid-column: seite / span 1;
     grid-row-start: miercoles / span 1;
