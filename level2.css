@@ -112,8 +112,7 @@ textarea {
 #box2{
     z-index: 3;
     grid-column: seite / span 1;
-    grid-row-start: miercoles;
-    grid-row-end: viernes;
+    grid-row-start: miercoles / span 1;
     border: 3px solid #FFF;
 }
 #box3{
