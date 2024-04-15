@@ -104,7 +104,7 @@ textarea {
     z-index: 3;
     grid-column-start: cuatro;
     grid-column-end: cinco;
-    grid-row-start: martes;
-    grid-row-end: miercoles;
+    grid-row-start: miercoles;
+    grid-row-end: jueves;
     border: 3px solid #3F47CC;
 }
