@@ -86,7 +86,7 @@ textarea {
 
 .grid-container{
     display: inline-grid;
-    grid-template-columns: [uno] 25px [dos] 50px [tres] 100px [cuatro] 300px [cinco] 50px [seis] 100px [seite] 200px [ocho] 100px [nueve] 50px [deis] 25px;
+    grid-template-columns: [uno] 25px [dos] 50px [tres] 100px [cuatro] 300px [cinco] 50px [seis] 100px [seite] 300px [ocho] 100px [nueve] 50px [deis] 25px;
     grid-template-rows: [lunes] 50px [martes] 50px [miercoles] 100px [jueves] 100px [viernes] 100px [sabado] 50px [domingo] 50px;
     <!---grid-column-gap: 10px;--->
     <!---grid-row-gap: 10px;--->
