@@ -86,7 +86,7 @@ textarea {
 
 .grid-container{
     display: inline-grid;
-    grid-template-columns: [uno] 25px [dos] 50px [tres] 100px [cuatro] 300px [cinco] 50px [seis] 100px [seite] 300px [ocho] 100px [nueve] 50px [deis] 25px;
+    grid-template-columns: [uno] 25px [dos] 50px [tres] 50px [cuatro] 300px [cinco] 50px [seis] 50px [seite] 300px [ocho] 50px [nueve] 50px [deis] 25px;
     grid-template-rows: [lunes] 25px [martes] 50px [miercoles] 100px [jueves] 200px [viernes] 100px [sabado] 50px [domingo] 25px;
     margin: 10px;
   }
@@ -108,7 +108,7 @@ textarea {
 }
 #box2{
     z-index: 3;
-    grid-column: cinco / span 2;
+    grid-column: cinco / seis;
     grid-row: lunes / martes;
     border: 3px solid #FFF;
 }
