@@ -104,10 +104,10 @@ textarea {
 }
 #box1{
     z-index: 3;
-    grid-column-start: cuatro;
+    grid-column-start: dos;
     grid-column-end: cinco;
     grid-row-start: lunes;
-    grid-row-end: jueves;
+    grid-row-end: martes;
     border: 3px solid #3F47CC;
 }
 #box2{
