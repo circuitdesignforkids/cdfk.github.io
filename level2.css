@@ -84,6 +84,14 @@ textarea {
     margin-left: auto;
 }
 
+.grid-container{
+    z-index: 1;
+    display: inline-grid;
+    grid-template-columns: [uno] 100px [dos] 200px [tres] 200px [cuatro] 200px [cinco] 100px;
+    grid-template-rows:[lunes] 50px [martes] 50px [miercoles] 100px [jueves] 100px [viernes] 100px [sabado] 50px [domingo] 50px;
+    background-color: #2196F3;
+  }
+  
 #wire{  
     z-index: 5;
     grid-column-start: dos; 
