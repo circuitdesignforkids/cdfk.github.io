@@ -110,14 +110,16 @@ textarea {
     border: 4px solid #3F47CC;
 }
 
-#box2{
+#mid
+{
     z-index: 3;
     grid-column: cuatro / seis;
     grid-row: sabado / domingo;
     border: 3px solid #FFF;
 }
 
-#box3{
+#right
+{
     z-index: 3;
     grid-column: ocho / nueve;
     grid-row: viernes / sabado;
