@@ -106,16 +106,16 @@ textarea {
 #box1{
     <!---position: relative;--->
     z-index: 3;
-    grid-column: uno / span 1;
-    grid-row: sabado / span 1;
+    grid-column: uno / dos;
+    grid-row: sabado / domingo;
     border: 3px solid #3F47CC;
     background: #000000e3;
 }
 #box2{
     <!---position: relative;--->
     z-index: 3;
-    grid-column: seite / span 1;
-    grid-row: lunes / span 1;
+    grid-column: seite / ocho;
+    grid-row: lunes / martes;
     border: 3px solid #FFF;
 }
 #box3{
