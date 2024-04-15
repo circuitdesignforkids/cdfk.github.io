@@ -98,5 +98,5 @@ textarea {
     grid-column-end: ocho;
     grid-row-start: miercoles;
     grid-row-end: sabado;
-    border-color: 5px black; 
+    border: 5px solid black; 
 }
