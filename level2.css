@@ -95,8 +95,8 @@ textarea {
 #wire{  
     z-index: 5;
     grid-column-start: dos; 
-    grid-column-end: ocho;
+    grid-column-end: deis;
     grid-row-start: miercoles;
     grid-row-end: sabado;
-    border: 5px solid black; 
+    border: 5px solid #A349A3; 
 }
