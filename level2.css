@@ -83,3 +83,12 @@ textarea {
     right: 23%;
     margin-left: auto;
 }
+
+#wire{  
+    z-index: 5;
+    grid-column-start: dos; 
+    grid-column-end: nueve;
+    grid-row-start: miercoles;
+    grid-row-end: sabado;
+    border: 5px #A349A3; 
+}
