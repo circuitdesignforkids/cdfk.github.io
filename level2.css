@@ -83,3 +83,11 @@ textarea {
     right: 23%;
     margin-left: auto;
 }
+
+.grid-container{
+    z-index: 1;
+    display: inline-grid;
+    grid-template-columns: [uno] 50px [dos] 50px [tres] 100px [cuatro] 300px [cinco] 50px [seis] 50px [seite] 300px [ocho] 100px [nueve] 50px [deis] 25px;
+    grid-template-rows: [lunes] 50px [martes] 50px [miercoles] 100px [jueves] 200px [viernes] 50px [sabado] 50px [domingo] 25px;
+    margin: 10px;
+}
