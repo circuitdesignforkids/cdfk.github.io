@@ -118,3 +118,10 @@ textarea {
     border: 3px solid #FFF;
     background-color: #000000e3;
 }
+
+#right{
+    z-index: 3;
+    grid-column: ocho / deis;
+    grid-row: viernes / sabado;
+    border: 3px solid #8ACB00;
+} 
