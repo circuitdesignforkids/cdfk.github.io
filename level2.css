@@ -91,3 +91,14 @@ textarea {
     grid-template-rows: [lunes] 50px [martes] 50px [miercoles] 100px [jueves] 200px [viernes] 50px [sabado] 50px [domingo] 25px;
     margin: 10px;
 }
+
+.grid-item{
+    display: inline-grid;
+}
+
+#wire{  
+    z-index: 2;
+    grid-column: tres / nueve; 
+    grid-row: lunes / sabado;
+    border: 5px solid #A349A3; 
+}
