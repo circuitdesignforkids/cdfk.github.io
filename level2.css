@@ -23,6 +23,7 @@ h2 {
 }
 
 leftbottombutton {
+    z-index: 1;
     background-color: #A349A3;
     color: #FFF;
     height: 5%;
@@ -83,9 +84,11 @@ textarea {
     margin-left: auto;
 }
 
-#componentLibrary {
+componentLibrary {
+    position: absolute;
+    top: 15%;
     width: 220px;
-    height: 600px;
+    height: 65%;
     border: 4px solid #8ACB00;
     padding: 10px;
     margin: 10px;
