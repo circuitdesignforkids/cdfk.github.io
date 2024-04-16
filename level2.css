@@ -106,7 +106,7 @@ textarea {
 #box1{
     z-index: 3;
     grid-column: dos / cuatro;
-    grid-row: miercoles / viernes;
+    grid-row: miercoles / sabado;
     border: 4px solid #3F47CC;
     background-color: #000000e3;
 }
