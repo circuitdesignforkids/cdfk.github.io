@@ -82,8 +82,8 @@ var droppedImage = new Image();
       <!---}--->
 
 } 
-
 </script>
+
 <head>
     <title>Level 2</title>
     <link rel="stylesheet" href="level2.css">
@@ -94,7 +94,11 @@ var droppedImage = new Image();
 </head>
 
 <body>
-    <h1>
+    <div class="grid-container">
+        <div id="wire" class="grid-item">
+        <div id="box1" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    
+        <h1>
         Level 2
     </h1>
     <h2>
@@ -132,9 +136,6 @@ var droppedImage = new Image();
         <rightbottombutton>Take the Quiz</rightbottombutton>
     </a>
 
-    <div class="grid-container">
-    <div id="wire" class="grid-item">
-    <div id="box1" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     <!---<div id="mid" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>--->
     <!---<div id="right" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>--->
 </body>
