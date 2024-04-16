@@ -100,3 +100,26 @@ h1 {
     font-size: 36pt;
     /* cursor: pointer; */
 }
+
+.surveyrectangle {
+    width: 20%;
+    height: 25%;
+    border: none;
+    border-radius: 30px;
+    background: #A349A3;
+    position: fixed;
+    top: 95%;
+    left: 50%;
+    margin-top: -10.5%;
+    margin-left: -10%;
+    font-size: 36pt;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Tourney';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 36pt;
+    cursor: pointer;
+}
