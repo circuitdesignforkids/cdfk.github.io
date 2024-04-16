@@ -99,14 +99,14 @@ textarea {
 #wire{  
     z-index: 2;
     grid-column: tres / nueve; 
-    grid-row: lunes / sabado;
+    grid-row: martes / domingo;
     border: 5px solid #A349A3; 
 }
 
 #box1{
     z-index: 3;
     grid-column: dos / cuatro;
-    grid-row: martes / jueves;
+    grid-row: miercoles / jueves;
     border: 4px solid #3F47CC;
     background-color: #000000e3;
 }
@@ -114,6 +114,6 @@ textarea {
 #mid{
     z-index: 3;
     grid-column: cinco / seite;
-    grid-row: martes / miercoles;
+    grid-row: lunes / miercoles;
     border: 3px solid #FFF;
 }
