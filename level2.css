@@ -114,7 +114,7 @@ textarea {
 #mid{
     z-index: 3;
     grid-column: cinco / seite;
-    grid-row: lunes / miercoles;
+    grid-row: lunes / jueves;
     border: 3px solid #FFF;
     background-color: #000000e3;
 }
