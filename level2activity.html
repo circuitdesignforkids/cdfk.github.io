@@ -156,7 +156,8 @@
                 }
             });
 
-            <!--Sets data type and value of the dragged data-->
+
+            // Sets data type and value of the dragged data
             function allowDrop(ev) {
 
                 ev.preventDefault();
@@ -167,10 +168,6 @@
 
                 ev.dataTransfer.setData("object", ev.target.id);
                 ev.target.setAttribute("contains-correct-image", "false");
-
-                circuitIsCorrect = false;
-                lightbulbImg.src = "LightOFF.png";
-                lightOn = false;
 
             }
 
@@ -195,9 +192,10 @@
                     ev.target.setAttribute("contains-correct-image", "false");
                 }
 
-                if (leftBox.getAttribute("contains-correct-image") === "true" &&
-                    midBox.getAttribute("contains-correct-image") === "true" &&
-                    rightBox.getAttribute("contains-correct-image") === "true") {
+                if ((ev.target == leftBox || ev.target == midBox || ev.target == rightBox) &&
+                    (leftBox.getAttribute("contains-correct-image") === "true" &&
+                        midBox.getAttribute("contains-correct-image") === "true" &&
+                        rightBox.getAttribute("contains-correct-image") === "true")) {
                     circuitIsCorrect = true;
                 }
                 else {
