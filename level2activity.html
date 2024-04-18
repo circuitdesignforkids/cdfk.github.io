@@ -58,15 +58,116 @@
         </textarea>
 
 
+
     <a href="index.html">
         <leftbottombutton>Home</leftbottombutton>
     </a>
     <a href="level2introvideo.html">
         <centerbottombutton>Go Back</centerbottombutton>
     </a>
-    <a href="quiz2.html">
-        <rightbottombutton>Take the Quiz</rightbottombutton>
+    <a href="level2postactivity.html">
+        <rightbottombutton>Next Page</rightbottombutton>
     </a>
+
+    <componentLibrary>
+        <center>
+            <h3>
+                Component Library
+            </h3>
+
+            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                <img src="BatteryICONright2.png" draggable="true" ondragstart="drag(event)" id="drag1" width="105"
+                    height="40">
+
+            </div>
+
+
+            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                <img src="BatteryICONleft2.png" draggable="true" ondragstart="drag(event)" id="drag1" width="105"
+                    height="40">
+
+            </div>
+
+            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                <img src="BatteryICONdown2.png" draggable="true" ondragstart="drag(event)" id="drag1" width="40"
+                    height="105">
+
+            </div>
+
+            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                <img src="BatteryICONup2.png" draggable="true" ondragstart="drag(event)" id="drag1" width="40"
+                    height="105">
+
+            </div>
+
+            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                <img src="LightOFF.png" draggable="true" ondragstart="drag(event)" id="drag1" width="80" height="80">
+
+            </div>
+
+            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                <img src="Resistorhoriz.png" draggable="true" ondragstart="drag(event)" id="drag1" width="100"
+                    height="50">
+
+            </div>
+            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                <img src="Resistorvert.png" draggable="true" ondragstart="drag(event)" id="drag1" width="50"
+                    height="100">
+
+            </div>
+        </center>
+
+    </componentLibrary>
+
+    <script>
+
+        <!--Sets data type and value of the dragged data-->
+        function allowDrop(ev) {
+
+            ev.preventDefault();
+
+        }
+
+        function drag(ev) {
+
+            ev.dataTransfer.setData("object", ev.target.id);
+
+        }
+
+
+        function drop(ev) {
+
+            ev.preventDefault();
+
+            var data = ev.dataTransfer.getData("object");
+
+            ev.target.appendChild(document.getElementById(data));
+
+            var droppedImage = new Image();
+            droppedImage.src = data;
+
+            var correctImage = event.target.getAttribute("data-correct-image");
+
+            if (correctImage && data.endsWith(correctImage + ".jpg")) {
+                event.target.appendChild(droppedImage);
+                alert("Correct image dropped in the correct box!");
+            } else {
+                alert("Incorrect image or box!");
+            }
+
+        }
+
+    </script>
+
+
+
 </body>
 
 </html>
