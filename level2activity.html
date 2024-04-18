@@ -16,18 +16,28 @@
         Level 2
     </h1>
     <h2>
-        <text font-size="20px">It's your turn! Try building a circuit below!<br> </text>
+        <text font-size="20px">It's your turn! Try building a circuit below!<br></text>
+        <text>When you're done, click "Test Your Circuit" to test your creation.</text>
     </h2>
+
+    <a href="level2introvideo.html">
+        <leftbottombutton>Go Back</leftbottombutton>
+    </a>
+    <centerbottombutton id="testCircuitButton">Test Your Circuit</centerbottombutton>
+    <a href="level2postactivity.html">
+        <rightbottombutton>Next Page</rightbottombutton>
+    </a>
 
     <div class="grid-container">
         <div id="wire" class="grid-item"></div>
         <div id="leftBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"
-            correct-image="resistorVert">
+            correct-image="resistorVert" contains-correct-image="false">
         </div>
-        <div id="midBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="lightOff">
+        <div id="midBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="lightbulb"
+            contains-correct-image="false">
         </div>
-        <div id="rightBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"
-            correct-image="battDown">
+        <div id="rightBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="battDown"
+            contains-correct-image="false">
         </div>
 
         <textarea id="Level 2 Curriculum" name="Level 2 Pseudocode" rows="10" cols="75" readonly="readonly">
@@ -68,18 +78,6 @@
 
         </textarea>
 
-
-
-        <a href="index.html">
-            <leftbottombutton>Home</leftbottombutton>
-        </a>
-        <a href="level2introvideo.html">
-            <centerbottombutton>Go Back</centerbottombutton>
-        </a>
-        <a href="level2postactivity.html">
-            <rightbottombutton>Next Page</rightbottombutton>
-        </a>
-
         <componentLibrary>
             <center>
                 <h3>
@@ -117,7 +115,7 @@
 
                 <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="any">
 
-                    <img id="lightOff" src="LightOFF.png" draggable="true" ondragstart="drag(event)" id="drag1"
+                    <img id="lightbulb" src="LightOFF.png" draggable="true" ondragstart="drag(event)" id="drag1"
                         width="100" height="100">
 
                 </div>
@@ -139,6 +137,24 @@
         </componentLibrary>
 
         <script>
+            const lightbulbImg = document.getElementById("lightbulb");
+            const testCircuitButton = document.getElementById("testCircuitButton");
+            const leftBox = document.getElementById("leftBox");
+            const midBox = document.getElementById("midBox");
+            const rightBox = document.getElementById("rightBox");
+            let circuitIsCorrect = false;
+            let lightOn = false;
+
+            testCircuitButton.addEventListener("click", function () {
+                if (circuitIsCorrect && !lightOn) {
+                    lightbulbImg.src = "LightON.png";
+                    lightOn = true;
+                }
+                else if (circuitIsCorrect && lightOn) {
+                    lightbulbImg.src = "LightOFF.png";
+                    lightOn = false;
+                }
+            });
 
             <!--Sets data type and value of the dragged data-->
             function allowDrop(ev) {
@@ -150,6 +166,11 @@
             function drag(ev) {
 
                 ev.dataTransfer.setData("object", ev.target.id);
+                ev.target.setAttribute("contains-correct-image", "false");
+
+                circuitIsCorrect = false;
+                lightbulbImg.src = "LightOFF.png";
+                lightOn = false;
 
             }
 
@@ -160,30 +181,35 @@
 
                 var data = ev.dataTransfer.getData("object");
 
-                // comment out if only dropping where correct or into comp library
                 ev.target.appendChild(document.getElementById(data));
-
-                var droppedImage = new Image();
-                droppedImage.src = data;
 
                 var correctImage = ev.target.getAttribute("correct-image");
 
                 if (correctImage === "any") {
-                    // uncomment if only dropping where correct or into comp library
-                    // ev.target.appendChild(document.getElementById(data));
                 }
                 else if (correctImage && data.endsWith(correctImage)) {
-                    // uncomment if only dropping where correct or into comp library
-                    // ev.target.appendChild(document.getElementById(data));
-                    alert("You did it! That's the right component!");
+
+                    ev.target.setAttribute("contains-correct-image", "true");
                 }
                 else {
-                    alert("That's not quite right... try again!");
+                    ev.target.setAttribute("contains-correct-image", "false");
+                }
+
+                if (leftBox.getAttribute("contains-correct-image") === "true" &&
+                    midBox.getAttribute("contains-correct-image") === "true" &&
+                    rightBox.getAttribute("contains-correct-image") === "true") {
+                    circuitIsCorrect = true;
+                }
+                else {
+                    circuitIsCorrect = false;
+                    lightbulbImg.src = "LightOFF.png";
+                    lightOn = false;
                 }
 
             }
 
         </script>
+
 
 </body>
 
