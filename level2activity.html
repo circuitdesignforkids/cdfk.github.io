@@ -1,6 +1,45 @@
 <!DOCTYPE html>
 <html>
 
+<script>
+<!--Sets data type and value of the dragged data-->
+function allowDrop(ev) { 
+
+  ev.preventDefault(); 
+
+} 
+
+function drag(ev) { 
+
+  ev.dataTransfer.setData("object", ev.target.id); 
+
+} 
+
+
+    function drop(ev) { 
+
+ev.preventDefault(); 
+
+var data = ev.dataTransfer.getData("object"); 
+
+ev.target.appendChild(document.getElementById(data)); 
+
+var droppedImage = new Image();
+     droppedImage.src = data;
+      
+     <!---Commented out right and wrong box function for testing need help understanding javascript syntax for this--->
+      var correctImage = event.target.getAttribute("data-correct-image");
+      
+     <!---if (correctImage && data.endsWith(correctImage + ".jpg")) {--->
+        <!---event.target.appendChild(droppedImage);--->
+         <!---alert("Correct image dropped in the correct box!");--->
+      <!---} else {--->
+          <!---alert("Incorrect image or box!");--->
+      <!---}--->
+
+} 
+</script>
+
 <head>
     <title>Level 2</title>
     <link rel="stylesheet" href="level2.css">
@@ -11,6 +50,7 @@
 </head>
 
 <body>
+
     <h1>
         Level 2
     </h1>
@@ -18,6 +58,11 @@
         <text font-size="20px">Welcome to Level 2! <br> </text>
     </h2>
 
+    <div class="grid-container">
+    <div id="wire" class="grid-item"></div>
+    <div id="box1" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="mid" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="right" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
     <textarea id="Level 2 Curriculum" name="Level 2 Pseudocode" rows="10" cols="75" readonly="readonly">
 
@@ -166,8 +211,5 @@
 
     </script>
 
-
-
 </body>
-
 </html>
