@@ -87,27 +87,33 @@ textarea {
 componentLibrary {
     position: absolute;
     top: 15%;
-    width: 220px;
+    width: 15%;
     height: 65%;
     border: 4px solid #8ACB00;
-    padding: 10px;
     margin: 10px;
+    text-align: center;
     overflow-y: auto;
 }
 
 h3 {
+    background-color: #1c1c1c;
     color: #8ACB00;
+    position: sticky;
+    width: 100%;
+    height: 20%;
+    top: 0px;
     text-align: center;
     font-family: 'Tourney';
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin-top: 0;
+    z-index: 1;
 }
 
 #component {
     position: relative;
-    float: left;
     display: flex;
     align-items: center;
     justify-content: center;
