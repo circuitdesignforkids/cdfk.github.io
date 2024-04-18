@@ -25,19 +25,20 @@
     </a>
     <centerbottombutton id="testCircuitButton">Test Your Circuit</centerbottombutton>
     <a href="level2postactivity.html">
-        <rightbottombutton>Next Page</rightbottombutton>
+        <rightbottombutton id="nextPageButton" style="background-color: #436102; pointer-events: none;">Next Page
+        </rightbottombutton>
     </a>
 
     <div class="grid-container">
         <div id="wire" class="grid-item"></div>
         <div id="leftBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"
-            correct-image="resistorVert" contains-correct-image="false">
+            correct-image="resistorVert" contains-correct-image="false" contains="none">
         </div>
         <div id="midBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="lightbulb"
-            contains-correct-image="false">
+            contains-correct-image="false" contains="none">
         </div>
         <div id="rightBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="battDown"
-            contains-correct-image="false">
+            contains-correct-image="false" contains="none">
         </div>
 
         <textarea id="Level 2 Curriculum" name="Level 2 Pseudocode" rows="10" cols="75" readonly="readonly">
@@ -142,19 +143,43 @@
             const leftBox = document.getElementById("leftBox");
             const midBox = document.getElementById("midBox");
             const rightBox = document.getElementById("rightBox");
+            const nextPageButton = document.getElementById("nextPageButton");
             let circuitIsCorrect = false;
             let lightOn = false;
 
             testCircuitButton.addEventListener("click", function () {
-                if (circuitIsCorrect && !lightOn) {
-                    lightbulbImg.src = "LightON.png";
-                    lightOn = true;
+                if (circuitIsCorrect) {
+                    if (!lightOn) {
+                        lightbulbImg.src = "LightON.png";
+                        lightOn = true;
+                    }
+                    else if (lightOn) {
+                        lightbulbImg.src = "LightOFF.png";
+                        lightOn = false;
+                    }
+                    nextPageButton.style.backgroundColor = "#8ACB00";
+                    nextPageButton.style.pointerEvents = "all";
                 }
-                else if (circuitIsCorrect && lightOn) {
+            });
+
+            function checkForCorrectComponentArrangement() {
+                let leftBoxContents = leftBox.getAttribute("contains");
+                let midBoxContents = midBox.getAttribute("contains");
+                let rightBoxContents = rightBox.getAttribute("contains");
+                if ((leftBoxContents == "lightbulb" && midBoxContents == "resistorHoriz" && rightBoxContents == "battUp") ||
+                    (leftBoxContents == "resistorVert" && midBoxContents == "lightbulb" && rightBoxContents == "battDown") ||
+                    (leftBoxContents == "battUp" && midBoxContents == "resistorHoriz" && rightBoxContents == "lightbulb") ||
+                    (leftBoxContents == "battDown" && midBoxContents == "lightbulb" && rightBoxContents == "resistorVert") ||
+                    (leftBoxContents == "resistorVert" && midBoxContents == "battLeft" && rightBoxContents == "lightbulb") ||
+                    (leftBoxContents == "lightbulb" && midBoxContents == "battRight" && rightBoxContents == "resistorVert")) {
+                    circuitIsCorrect = true;
+                }
+                else {
+                    circuitIsCorrect = false;
                     lightbulbImg.src = "LightOFF.png";
                     lightOn = false;
                 }
-            });
+            }
 
 
             // Sets data type and value of the dragged data
@@ -167,8 +192,11 @@
             function drag(ev) {
 
                 ev.dataTransfer.setData("object", ev.target.id);
-                ev.target.setAttribute("contains-correct-image", "false");
-
+                ev.target.setAttribute("contains", "none");
+                if (!checkForCorrectComponentArrangement()) {
+                    lightbulbImg.src = "LightOFF.png";
+                    lightOn = false;
+                }
             }
 
 
@@ -179,27 +207,10 @@
                 var data = ev.dataTransfer.getData("object");
 
                 ev.target.appendChild(document.getElementById(data));
+                ev.target.setAttribute("contains", data);
 
-                var correctImage = ev.target.getAttribute("correct-image");
-
-                if (correctImage === "any") {
-                }
-                else if (correctImage && data.endsWith(correctImage)) {
-
-                    ev.target.setAttribute("contains-correct-image", "true");
-                }
-                else {
-                    ev.target.setAttribute("contains-correct-image", "false");
-                }
-
-                if ((ev.target == leftBox || ev.target == midBox || ev.target == rightBox) &&
-                    (leftBox.getAttribute("contains-correct-image") === "true" &&
-                        midBox.getAttribute("contains-correct-image") === "true" &&
-                        rightBox.getAttribute("contains-correct-image") === "true")) {
-                    circuitIsCorrect = true;
-                }
-                else {
-                    circuitIsCorrect = false;
+                checkForCorrectComponentArrangement();
+                if (!circuitIsCorrect) {
                     lightbulbImg.src = "LightOFF.png";
                     lightOn = false;
                 }
