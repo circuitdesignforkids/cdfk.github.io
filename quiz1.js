@@ -146,6 +146,11 @@ var _0xf45b = function (_0x5e3daa, _0x5e4d76) {
         this[_0xf45b('0x1')][_0xf45b('0x28')] && clearInterval(this[_0xf45b('0x4f')]);
         var _0x5bc340 = document[_0xf45b('0x4')]('span');
         _0x5bc340[_0xf45b('0x16')] = _0xf45b('0x58') + this[_0xf45b('0x27')] + '/' + this['options']['quizQuestions'][_0xf45b('0x9')], this['submitPrnt'][_0xf45b('0x7')](_0x5bc340);
+        // ENABLE NEXT PAGE BUTTON ON SUBMIT QUIZ
+        let nextPageButton = document.getElementById("nextPageButton");
+        nextPageButton.style.backgroundColor = "#8ACB00";
+        nextPageButton.style.pointerEvents = "all";
+        //
     };
 }());
 var data = [{
@@ -249,7 +254,7 @@ var data = [{
         "right": true,
         "selected": false
     }, {
-        "value": "Camera",
+        "value": "Candle",
         "right": false,
         "selected": false
     }, {
