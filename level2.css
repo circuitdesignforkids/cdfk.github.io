@@ -56,6 +56,7 @@ centerbottombutton {
     bottom: 2px;
     left: 50%;
     margin-left: -15%;
+    cursor: pointer;
 }
 
 rightbottombutton {
@@ -87,6 +88,7 @@ textarea {
 componentLibrary {
     position: absolute;
     top: 15%;
+    left: 0px;
     width: 15%;
     height: 65%;
     border: 4px solid #8ACB00;
@@ -109,7 +111,7 @@ h3 {
     font-weight: 700;
     line-height: normal;
     margin-top: 0;
-    z-index: 1;
+    z-index: 10;
 }
 
 #component {
@@ -122,47 +124,67 @@ h3 {
     margin: 20px;
     padding: 20px;
     border: 1px solid #8ACB00;
+    z-index: 2;
 }
 
-.grid-container{
+.grid-container {
     z-index: 1;
     display: inline-grid;
-    grid-template-columns: [uno] 50px [dos] 75px [tres] 75px [cuatro] 200px [cinco] 75px [seis] 75px [seite] 300px [ocho] 75px [nueve] 75px [deis] 25px;
-    grid-template-rows: [lunes] 50px [martes] 50px [miercoles] 50px [jueves] 50px [viernes] 50px [sabado] 50px [domingo] 25px;
-    margin: 10px;
+    grid-template-columns: [one] 50px [two] 75px [three] 75px [four] 200px [five] 75px [six] 75px [seven] 300px [eight] 75px [nine] 75px [ten] 25px;
+    grid-template-rows: [alphaa] 50px [beta] 50px [bravo] 50px [charlie] 50px [delta] 50px [echo] 50px [foxtrot] 25px;
+    margin-left: 20%;
+    margin-top: 2%;
 }
 
-.grid-item{
+.grid-item {
     display: inline-grid;
 }
 
-#wire{  
+#wire {
     z-index: 2;
-    grid-column: tres / nueve; 
-    grid-row: martes / domingo;
-    border: 5px solid #A349A3; 
+    grid-column: three / nine;
+    grid-row: beta / foxtrot;
+    border: 5px solid #A349A3;
 }
 
-#box1{
+#leftBox {
     z-index: 3;
-    grid-column: dos / cuatro;
-    grid-row: miercoles / sabado;
+    grid-column: two / four;
+    grid-row: bravo / echo;
+    width: 100px;
+    height: 70px;
+    padding: 20px;
     border: 4px solid #3F47CC;
     background-color: #000000e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#mid{
+#midBox {
     z-index: 3;
-    grid-column: cinco / seite;
-    grid-row: lunes / jueves;
+    grid-column: five / seven;
+    grid-row: alphaa / charlie;
+    width: 100px;
+    height: 70px;
+    padding: 20px;
     border: 3px solid #FFF;
     background-color: #000000e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#right{
+#rightBox {
     z-index: 3;
-    grid-column: ocho / deis;
-    grid-row: miercoles / sabado;
+    grid-column: eight / ten;
+    grid-row: bravo / echo;
+    width: 100px;
+    height: 70px;
+    padding: 20px;
     border: 3px solid #8ACB00;
     background-color: #000000e3;
-} 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
