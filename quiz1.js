@@ -249,7 +249,7 @@ var data = [{
         "right": true,
         "selected": false
     }, {
-        "value": "Camera",
+        "value": "Candle",
         "right": false,
         "selected": false
     }, {
