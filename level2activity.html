@@ -16,71 +16,19 @@
         Level 2
     </h1>
     <h2>
-        <text font-size="20px">Welcome to Level 2! <br> </text>
+        <text font-size="20px">It's your turn! Try building a circuit below!<br> </text>
     </h2>
-
-    <!-- <componentLibrary>
-        <center>
-            <h3>
-                Component Library
-            </h3>
-
-            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                <img src="BatteryICONright2.png" draggable="true" ondragstart="drag(event)" id="drag1" width="105"
-                    height="40">
-
-            </div>
-
-
-            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                <img src="BatteryICONleft2.png" draggable="true" ondragstart="drag(event)" id="drag1" width="105"
-                    height="40">
-
-            </div>
-
-            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                <img src="BatteryICONdown2.png" draggable="true" ondragstart="drag(event)" id="drag1" width="40"
-                    height="105">
-
-            </div>
-
-            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                <img src="BatteryICONup2.png" draggable="true" ondragstart="drag(event)" id="drag1" width="40"
-                    height="105">
-
-            </div>
-
-            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                <img src="LightOFF.png" draggable="true" ondragstart="drag(event)" id="drag1" width="80" height="80">
-
-            </div>
-
-            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                <img src="Resistorhoriz.png" draggable="true" ondragstart="drag(event)" id="drag1" width="100"
-                    height="50">
-
-            </div>
-            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                <img src="Resistorvert.png" draggable="true" ondragstart="drag(event)" id="drag1" width="50"
-                    height="100">
-
-            </div>
-        </center>
-
-    </componentLibrary> -->
 
     <div class="grid-container">
         <div id="wire" class="grid-item"></div>
-        <div id="box1" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <div id="mid" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <div id="right" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="leftBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"
+            correct-image="resistorVert">
+        </div>
+        <div id="midBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="lightOff">
+        </div>
+        <div id="rightBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"
+            correct-image="battDown">
+        </div>
 
         <textarea id="Level 2 Curriculum" name="Level 2 Pseudocode" rows="10" cols="75" readonly="readonly">
 
@@ -138,7 +86,7 @@
                     Component Library
                 </h3>
 
-                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="any">
 
                     <img id="battRight" src="BatteryICONright2.png" draggable="true" ondragstart="drag(event)"
                         id="drag1" width="105" height="40">
@@ -146,41 +94,41 @@
                 </div>
 
 
-                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="any">
 
                     <img id="battLeft" src="BatteryICONleft2.png" draggable="true" ondragstart="drag(event)" id="drag1"
                         width="105" height="40">
 
                 </div>
 
-                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="any">
 
                     <img id="battDown" src="BatteryICONdown2.png" draggable="true" ondragstart="drag(event)" id="drag1"
                         width="40" height="105">
 
                 </div>
 
-                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="any">
 
                     <img id="battUp" src="BatteryICONup2.png" draggable="true" ondragstart="drag(event)" id="drag1"
                         width="40" height="105">
 
                 </div>
 
-                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="any">
 
                     <img id="lightOff" src="LightOFF.png" draggable="true" ondragstart="drag(event)" id="drag1"
-                        width="80" height="80">
+                        width="100" height="100">
 
                 </div>
 
-                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="any">
 
                     <img id="resistorHoriz" src="Resistorhoriz.png" draggable="true" ondragstart="drag(event)"
                         id="drag1" width="100" height="50">
 
                 </div>
-                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="any">
 
                     <img id="resistorVert" src="Resistorvert.png" draggable="true" ondragstart="drag(event)" id="drag1"
                         width="50" height="100">
@@ -212,19 +160,26 @@
 
                 var data = ev.dataTransfer.getData("object");
 
+                // comment out if only dropping where correct or into comp library
                 ev.target.appendChild(document.getElementById(data));
 
-                // var droppedImage = new Image();
-                // droppedImage.src = data;
+                var droppedImage = new Image();
+                droppedImage.src = data;
 
-                // var correctImage = event.target.getAttribute("data-correct-image");
+                var correctImage = ev.target.getAttribute("correct-image");
 
-                // if (correctImage && data.endsWith(correctImage + ".jpg")) {
-                //     event.target.appendChild(droppedImage);
-                //     alert("Correct image dropped in the correct box!");
-                // } else {
-                //     alert("Incorrect image or box!");
-                // }
+                if (correctImage === "any") {
+                    // uncomment if only dropping where correct or into comp library
+                    // ev.target.appendChild(document.getElementById(data));
+                }
+                else if (correctImage && data.endsWith(correctImage)) {
+                    // uncomment if only dropping where correct or into comp library
+                    // ev.target.appendChild(document.getElementById(data));
+                    alert("You did it! That's the right component!");
+                }
+                else {
+                    alert("That's not quite right... try again!");
+                }
 
             }
 
