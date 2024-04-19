@@ -16,12 +16,13 @@
         Level 2
     </h1>
     <h2>
-        <text font-size="20px">It's your turn! Try building a circuit below!<br></text>
-        <text>When you're done, click "Test Your Circuit" to test your creation.</text>
+        <text>It's your turn! Try building a circuit below!<br></text>
+        <text>When you're done, click "Test Your Circuit" to test your creation.<br></text>
     </h2>
 
-    <a href="level2introvideo.html">
-        <leftbottombutton>Go Back</leftbottombutton>
+
+    <a href="level2postvideo.html">
+        <leftbottombutton>Back</leftbottombutton>
     </a>
     <centerbottombutton id="testCircuitButton">Test Your Circuit</centerbottombutton>
     <a href="level2postactivity.html">
@@ -30,6 +31,9 @@
     </a>
 
     <div class="grid-container">
+        <div id="successblurb" class="grid-item" style="visibility: hidden;">Whoa, check out that lightbulb!
+            Electrical
+            energy is flowing from the battery, through the resistor, and to the lightbulb, giving it power!</div>
         <div id="wire" class="grid-item"></div>
         <div id="leftBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"
             correct-image="resistorVert" contains-correct-image="false" contains="none">
@@ -40,43 +44,21 @@
         <div id="rightBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="battDown"
             contains-correct-image="false" contains="none">
         </div>
+        <div id="successBlurb" style="visibility: hidden;">
+            <text> Whoa, check out that lightbulb! Electrical energy is flowing from the battery, through
+                the resistor, and to the lightbulb, giving it power!</text>
+        </div>
 
         <textarea id="Level 2 Curriculum" name="Level 2 Pseudocode" rows="10" cols="75" readonly="readonly">
+    Let's talk about a few of The Electric Playground's features before we start.
 
+    The empty space in the middle is called the Workspace. This is where you will connect components and build your circuit.
 
-        Welcome to our Electric Playground!
+    The component library is where you can find all of the components you will need for this activity. When you need a component, you can use your mouse to drag and drop it into a box in the Workspace.
 
-        Let's talk about a few features of our playground before our activity.
+    Now, it's time to build your first circuit!
 
-        The empty space in the middle is called the Workspace. This is where you will connect components and build your circuit.
-
-        Speaking of components, next up is the component library.
-
-        The component library is where you can find all the components we will need for the activity. When you need a component for an activity, you can use the mouse to drag and drop the component into the Workspace.
-
-        Finally, we have the home button which will take you back to the Main Menu of the game.
-
-        **ACTIVITY TIME**
-
-        It is time to build your first circuit!
-
-        We will start by dragging a battery into the Workspace.
-
-        Great!
-
-        Next drag a resistor into the Workspace.
-
-        Nice!
-
-        Next drag a light bulb into the Workspace.
-
-        Super!
-
-        Woah check out the light bulb! Electrical energy is flowing from the battery, through the resistor and to the light bulb giving it power!
-
-        Great job building your first circuit!
-
-
+    Here's a hint: you'll need a battery, resistor, and the lightbulb, and the direction they face matters!
         </textarea>
 
         <componentLibrary>
@@ -144,6 +126,7 @@
             const midBox = document.getElementById("midBox");
             const rightBox = document.getElementById("rightBox");
             const nextPageButton = document.getElementById("nextPageButton");
+            const successBlurb = document.getElementById("successBlurb");
             let circuitIsCorrect = false;
             let lightOn = false;
 
@@ -157,6 +140,7 @@
                         lightbulbImg.src = "LightOFF.png";
                         lightOn = false;
                     }
+                    successBlurb.style.visibility = "visible";
                     nextPageButton.style.backgroundColor = "#8ACB00";
                     nextPageButton.style.pointerEvents = "all";
                 }
