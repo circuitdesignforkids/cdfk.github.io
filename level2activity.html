@@ -11,161 +11,213 @@
 </head>
 
 <body>
+
     <h1>
         Level 2
     </h1>
     <h2>
-        <text font-size="20px">Welcome to Level 2! <br> </text>
+        <text font-size="20px">It's your turn! Try building a circuit below!<br></text>
+        <text>When you're done, click "Test Your Circuit" to test your creation.</text>
     </h2>
 
+    <a href="level2introvideo.html">
+        <leftbottombutton>Go Back</leftbottombutton>
+    </a>
+    <centerbottombutton id="testCircuitButton">Test Your Circuit</centerbottombutton>
+    <a href="level2postactivity.html">
+        <rightbottombutton id="nextPageButton" style="background-color: #436102; pointer-events: none;">Next Page
+        </rightbottombutton>
+    </a>
 
-    <textarea id="Level 2 Curriculum" name="Level 2 Pseudocode" rows="10" cols="75" readonly="readonly">
+    <div class="grid-container">
+        <div id="wire" class="grid-item"></div>
+        <div id="leftBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)"
+            correct-image="resistorVert" contains-correct-image="false" contains="none">
+        </div>
+        <div id="midBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="lightbulb"
+            contains-correct-image="false" contains="none">
+        </div>
+        <div id="rightBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="battDown"
+            contains-correct-image="false" contains="none">
+        </div>
 
-        
-        Welcome to our Electric Playground! 
+        <textarea id="Level 2 Curriculum" name="Level 2 Pseudocode" rows="10" cols="75" readonly="readonly">
 
-        Let's talk about a few features of our playground before our activity.  
 
-        The empty space in the middle is called the Workspace. This is where you will connect components and build your circuit. 
+        Welcome to our Electric Playground!
 
-        Speaking of components, next up is the component library. 
-        
-        The component library is where you can find all the components we will need for the activity. When you need a component for an activity, you can use the mouse to drag and drop the component into the Workspace.  
+        Let's talk about a few features of our playground before our activity.
 
-        Finally, we have the home button which will take you back to the Main Menu of the game. 
+        The empty space in the middle is called the Workspace. This is where you will connect components and build your circuit.
 
-        **ACTIVITY TIME** 
+        Speaking of components, next up is the component library.
 
-        It is time to build your first circuit!   
+        The component library is where you can find all the components we will need for the activity. When you need a component for an activity, you can use the mouse to drag and drop the component into the Workspace.
 
-        We will start by dragging a battery into the Workspace.  
+        Finally, we have the home button which will take you back to the Main Menu of the game.
 
-        Great!  
+        **ACTIVITY TIME**
 
-        Next drag a resistor into the Workspace.  
+        It is time to build your first circuit!
 
-        Nice! 
+        We will start by dragging a battery into the Workspace.
+
+        Great!
+
+        Next drag a resistor into the Workspace.
+
+        Nice!
 
         Next drag a light bulb into the Workspace.
 
-        Super! 
+        Super!
 
-        Woah check out the light bulb! Electrical energy is flowing from the battery, through the resistor and to the light bulb giving it power! 
+        Woah check out the light bulb! Electrical energy is flowing from the battery, through the resistor and to the light bulb giving it power!
 
         Great job building your first circuit!
 
 
         </textarea>
 
+        <componentLibrary>
+            <center>
+                <h3>
+                    Component Library
+                </h3>
+
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="any">
+
+                    <img id="battRight" src="BatteryICONright2.png" draggable="true" ondragstart="drag(event)"
+                        id="drag1" width="105" height="40">
+
+                </div>
 
 
-    <a href="index.html">
-        <leftbottombutton>Home</leftbottombutton>
-    </a>
-    <a href="level2introvideo.html">
-        <centerbottombutton>Go Back</centerbottombutton>
-    </a>
-    <a href="level2postactivity.html">
-        <rightbottombutton>Next Page</rightbottombutton>
-    </a>
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="any">
 
-    <componentLibrary>
-        <center>
-            <h3>
-                Component Library
-            </h3>
+                    <img id="battLeft" src="BatteryICONleft2.png" draggable="true" ondragstart="drag(event)" id="drag1"
+                        width="105" height="40">
 
-            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+                </div>
 
-                <img src="BatteryICONright2.png" draggable="true" ondragstart="drag(event)" id="drag1" width="105"
-                    height="40">
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="any">
 
-            </div>
+                    <img id="battDown" src="BatteryICONdown2.png" draggable="true" ondragstart="drag(event)" id="drag1"
+                        width="40" height="105">
 
+                </div>
 
-            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="any">
 
-                <img src="BatteryICONleft2.png" draggable="true" ondragstart="drag(event)" id="drag1" width="105"
-                    height="40">
+                    <img id="battUp" src="BatteryICONup2.png" draggable="true" ondragstart="drag(event)" id="drag1"
+                        width="40" height="105">
 
-            </div>
+                </div>
 
-            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="any">
 
-                <img src="BatteryICONdown2.png" draggable="true" ondragstart="drag(event)" id="drag1" width="40"
-                    height="105">
+                    <img id="lightbulb" src="LightOFF.png" draggable="true" ondragstart="drag(event)" id="drag1"
+                        width="100" height="100">
 
-            </div>
+                </div>
 
-            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="any">
 
-                <img src="BatteryICONup2.png" draggable="true" ondragstart="drag(event)" id="drag1" width="40"
-                    height="105">
+                    <img id="resistorHoriz" src="Resistorhoriz.png" draggable="true" ondragstart="drag(event)"
+                        id="drag1" width="100" height="50">
 
-            </div>
+                </div>
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)" correct-image="any">
 
-            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img id="resistorVert" src="Resistorvert.png" draggable="true" ondragstart="drag(event)" id="drag1"
+                        width="50" height="100">
 
-                <img src="LightOFF.png" draggable="true" ondragstart="drag(event)" id="drag1" width="80" height="80">
+                </div>
+            </center>
 
-            </div>
+        </componentLibrary>
 
-            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <script>
+            const lightbulbImg = document.getElementById("lightbulb");
+            const testCircuitButton = document.getElementById("testCircuitButton");
+            const leftBox = document.getElementById("leftBox");
+            const midBox = document.getElementById("midBox");
+            const rightBox = document.getElementById("rightBox");
+            const nextPageButton = document.getElementById("nextPageButton");
+            let circuitIsCorrect = false;
+            let lightOn = false;
 
-                <img src="Resistorhoriz.png" draggable="true" ondragstart="drag(event)" id="drag1" width="100"
-                    height="50">
+            testCircuitButton.addEventListener("click", function () {
+                if (circuitIsCorrect) {
+                    if (!lightOn) {
+                        lightbulbImg.src = "LightON.png";
+                        lightOn = true;
+                    }
+                    else if (lightOn) {
+                        lightbulbImg.src = "LightOFF.png";
+                        lightOn = false;
+                    }
+                    nextPageButton.style.backgroundColor = "#8ACB00";
+                    nextPageButton.style.pointerEvents = "all";
+                }
+            });
 
-            </div>
-            <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                <img src="Resistorvert.png" draggable="true" ondragstart="drag(event)" id="drag1" width="50"
-                    height="100">
-
-            </div>
-        </center>
-
-    </componentLibrary>
-
-    <script>
-
-        <!--Sets data type and value of the dragged data-->
-        function allowDrop(ev) {
-
-            ev.preventDefault();
-
-        }
-
-        function drag(ev) {
-
-            ev.dataTransfer.setData("object", ev.target.id);
-
-        }
-
-
-        function drop(ev) {
-
-            ev.preventDefault();
-
-            var data = ev.dataTransfer.getData("object");
-
-            ev.target.appendChild(document.getElementById(data));
-
-            var droppedImage = new Image();
-            droppedImage.src = data;
-
-            var correctImage = event.target.getAttribute("data-correct-image");
-
-            if (correctImage && data.endsWith(correctImage + ".jpg")) {
-                event.target.appendChild(droppedImage);
-                alert("Correct image dropped in the correct box!");
-            } else {
-                alert("Incorrect image or box!");
+            function checkForCorrectComponentArrangement() {
+                let leftBoxContents = leftBox.getAttribute("contains");
+                let midBoxContents = midBox.getAttribute("contains");
+                let rightBoxContents = rightBox.getAttribute("contains");
+                if ((leftBoxContents == "lightbulb" && midBoxContents == "resistorHoriz" && rightBoxContents == "battUp") ||
+                    (leftBoxContents == "resistorVert" && midBoxContents == "lightbulb" && rightBoxContents == "battDown") ||
+                    (leftBoxContents == "battUp" && midBoxContents == "resistorHoriz" && rightBoxContents == "lightbulb") ||
+                    (leftBoxContents == "battDown" && midBoxContents == "lightbulb" && rightBoxContents == "resistorVert") ||
+                    (leftBoxContents == "resistorVert" && midBoxContents == "battLeft" && rightBoxContents == "lightbulb") ||
+                    (leftBoxContents == "lightbulb" && midBoxContents == "battRight" && rightBoxContents == "resistorVert")) {
+                    circuitIsCorrect = true;
+                }
+                else {
+                    circuitIsCorrect = false;
+                    lightbulbImg.src = "LightOFF.png";
+                    lightOn = false;
+                }
             }
 
-        }
 
-    </script>
+            // Sets data type and value of the dragged data
+            function allowDrop(ev) {
 
+                ev.preventDefault();
+
+            }
+
+            function drag(ev) {
+
+                ev.dataTransfer.setData("object", ev.target.id);
+                ev.target.setAttribute("contains", "none");
+                if (!checkForCorrectComponentArrangement()) {
+                    lightbulbImg.src = "LightOFF.png";
+                    lightOn = false;
+                }
+            }
+
+
+            function drop(ev) {
+
+                ev.preventDefault();
+
+                var data = ev.dataTransfer.getData("object");
+
+                ev.target.appendChild(document.getElementById(data));
+                ev.target.setAttribute("contains", data);
+
+                checkForCorrectComponentArrangement();
+                if (!circuitIsCorrect) {
+                    lightbulbImg.src = "LightOFF.png";
+                    lightOn = false;
+                }
+
+            }
+
+        </script>
 
 
 </body>
