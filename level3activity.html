@@ -11,20 +11,208 @@
 </head>
 
 <body>
+
     <h1>
         Level 3
     </h1>
     <h2>
-        <text font-size="20px">Welcome to Level 3! <br> </text>
+        <text font-size="20px">It's your turn! Try building a circuit below!<br></text>
+        <text>When you're done, click "Test Your Circuit" to test your creation.</text>
     </h2>
 
-    <a href="index.html">
-        <leftbottombutton>Home</leftbottombutton>
+    <a href="level3introvideo.html">
+        <leftbottombutton>Go Back</leftbottombutton>
     </a>
+    <centerbottombutton id="testCircuitButton">Test Your Circuit</centerbottombutton>
+    <a href="level3postactivity.html">
+        <rightbottombutton id="nextPageButton" style="background-color: #436102; pointer-events: none;">Next Page
+        </rightbottombutton>
+    </a>
+
+    <div class="grid-container">
+        <div id="wire" class="grid-item"></div>
+        <div id="leftBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)" contains="none">
+        </div>
+        <div id="midBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)" contains="none">
+        </div>
+        <div id="rightBox" class="grid-item" ondrop="drop(event)" ondragover="allowDrop(event)" contains="none">
+        </div>
+
+        <textarea id="Level 3 Curriculum" name="Level 3 Pseudocode" rows="10" cols="75" readonly="readonly">
+
+
+        Welcome to our Electric Playground!
+
+        Let's talk about a few features of our playground before our activity.
+
+        The empty space in the middle is called the Workspace. This is where you will connect components and build your circuit.
+
+        Speaking of components, next up is the component library.
+
+        The component library is where you can find all the components we will need for the activity. When you need a component for an activity, you can use the mouse to drag and drop the component into the Workspace.
+
+        Finally, we have the home button which will take you back to the Main Menu of the game.
+
+        **ACTIVITY TIME**
+
+        It is time to build your first circuit!
+
+        We will start by dragging a battery into the Workspace.
+
+        Great!
+
+        Next drag a resistor into the Workspace.
+
+        Nice!
+
+        Next drag a light bulb into the Workspace.
+
+        Super!
+
+        Woah check out the light bulb! Electrical energy is flowing from the battery, through the resistor and to the light bulb giving it power!
+
+        Great job building your first circuit!
+
+
+        </textarea>
+
+        <componentLibrary>
+            <center>
+                <h3>
+                    Component Library
+                </h3>
+
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                    <img id="battUp" src="BatteryICONup2.png" draggable="true" ondragstart="drag(event)" id="drag1"
+                        width="40" height="105">
+
+                </div>
+
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                    <img id="lightbulb" src="LightOFF.png" draggable="true" ondragstart="drag(event)" id="drag1"
+                        width="100" height="100">
+
+                </div>
+
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                    <img id="resistorLow" src="ResistorLow.png" draggable="true" ondragstart="drag(event)" id="drag1"
+                        width="100" height="50">
+
+                </div>
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                    <img id="resistorMed" src="ResistorMed.png" draggable="true" ondragstart="drag(event)" id="drag1"
+                        width="100" height="50">
+
+                </div>
+                <div id="component" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                    <img id="resistorHigh" src="ResistorHigh.png" draggable="true" ondragstart="drag(event)" id="drag1"
+                        width="200" height="50">
+
+                </div>
+            </center>
+
+        </componentLibrary>
+
+        <script>
+            const lightbulbImg = document.getElementById("lightbulb");
+            const testCircuitButton = document.getElementById("testCircuitButton");
+            const leftBox = document.getElementById("leftBox");
+            const midBox = document.getElementById("midBox");
+            const rightBox = document.getElementById("rightBox");
+            const nextPageButton = document.getElementById("nextPageButton");
+            let circuitIsCorrect = false;
+            let lightOn = false;
+
+            testCircuitButton.addEventListener("click", function () {
+                if (circuitIsCorrect) {
+
+                    if (!lightOn) {
+                        let midBoxContents = midBox.getAttribute("contains");
+                        if (midBoxContents == "resistorLow") {
+                            lightbulbImg.src = "LightONbright.png";
+                        }
+                        else if (midBoxContents == "resistorMed") {
+                            lightbulbImg.src = "LightON.png";
+                        }
+                        else if (midBoxContents == "resistorHigh") {
+                            lightbulbImg.src = "LightONdim.png";
+                        }
+                        lightOn = true;
+                    }
+                    else if (lightOn) {
+                        lightbulbImg.src = "LightOFF.png";
+                        lightOn = false;
+                    }
+                    nextPageButton.style.backgroundColor = "#8ACB00";
+                    nextPageButton.style.pointerEvents = "all";
+                }
+            });
+
+            function checkForCorrectComponentArrangement() {
+                let leftBoxContents = leftBox.getAttribute("contains");
+                let midBoxContents = midBox.getAttribute("contains");
+                let rightBoxContents = rightBox.getAttribute("contains");
+                if ((leftBoxContents == "battUp" && midBoxContents == "resistorLow" && rightBoxContents == "lightbulb") ||
+                    (leftBoxContents == "battUp" && midBoxContents == "resistorMed" && rightBoxContents == "lightbulb") ||
+                    (leftBoxContents == "battUp" && midBoxContents == "resistorHigh" && rightBoxContents == "lightbulb")) {
+                    circuitIsCorrect = true;
+                }
+                else {
+                    circuitIsCorrect = false;
+                    lightbulbImg.src = "LightOFF.png";
+                    lightOn = false;
+                }
+            }
+
+
+            // Sets data type and value of the dragged data
+            function allowDrop(ev) {
+
+                ev.preventDefault();
+
+            }
+
+            function drag(ev) {
+
+                ev.dataTransfer.setData("object", ev.target.id);
+                // this doesn't set the "contains" attribute of the box.
+                // unsure why because it does so successfully in drop(ev)
+                // bug: you can still turn the light on/off after removing a component from circuit. centers around this line
+                ev.target.setAttribute("contains", "none");
+
+                // honestly not sure why that function call that returns nothing makes this behave correctly
+                if (!checkForCorrectComponentArrangement()) {
+                    lightbulbImg.src = "LightOFF.png";
+                    lightOn = false;
+                }
+            }
+
+
+            function drop(ev) {
+
+                ev.preventDefault();
+
+                var data = ev.dataTransfer.getData("object");
+
+                ev.target.appendChild(document.getElementById(data));
+                ev.target.setAttribute("contains", data);
+
+                checkForCorrectComponentArrangement();
+                if (!circuitIsCorrect) {
+                    lightbulbImg.src = "LightOFF.png";
+                    lightOn = false;
+                }
+
+            }
+
+        </script>
 
 
 </body>
-
-
 
 </html>
