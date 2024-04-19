@@ -155,110 +155,110 @@ var _0xf45b = function (_0x5e3daa, _0x5e4d76) {
 }());
 var data = [{
     "type": "radio",
-    "question": "What do you use to connect components in a circuit?",
-    "explanation": "Metal Wire is used to connect components together in a circuit.",
+    "question": "In a circuit like the one you just made, what resistance will make the light shine brightest?",
+    "explanation": "The lower the resistance, the more electrical energy can flow to the lightbulb, making it brighter.",
     "options": [{
-        "value": "Spaghetti",
-        "right": false,
-        "selected": false
-    }, {
-        "value": "Rope",
-        "right": false,
-        "selected": false
-    }, {
-        "value": "Twizzlers",
-        "right": false,
-        "selected": false
-    }, {
-        "value": "Metal Wire",
+        "value": "2 Ohms",
         "right": true,
+        "selected": false
+    }, {
+        "value": "20 Ohms",
+        "right": false,
+        "selected": false
+    }, {
+        "value": "200 Ohms",
+        "right": false,
+        "selected": false
+    }, {
+        "value": "2000 Ohms",
+        "right": false,
         "selected": false
     }],
     "selected": "3"
 }, {
     "type": "radio",
-    "question": "Batteries are the source of what energy in a circuit?",
-    "explanation": "Batteries are the source of electrical energy in a circuit.",
+    "question": "abc",
+    "explanation": "cde",
     "options": [{
-        "value": "Kinetic energy",
+        "value": "1",
         "right": false,
         "selected": false
     }, {
-        "value": "Electrical Energy",
+        "value": "2",
         "right": true,
         "selected": false
     }, {
-        "value": "Potential Energy",
+        "value": "3",
         "right": false,
         "selected": false
     }, {
-        "value": "Thermal Energy",
+        "value": "4",
         "right": false,
         "selected": false
     }],
     "selected": "1"
 }, {
     "type": "radio",
-    "question": "What is the unit of measurement for resistance?",
-    "explanation": "Resistance is measured in ohms.",
+    "question": "In a circuit like the one you just made, what resistance will make the light be the dimmest?",
+    "explanation": "The higher the resistance, the less electrical energy can flow to the lightbulb, making it dimmer.",
     "options": [{
-        "value": "Volts",
+        "value": "5 Ohms",
         "right": false,
         "selected": false
     }, {
-        "value": "Dollar",
+        "value": "50 Ohms",
         "right": false,
         "selected": false
     }, {
-        "value": "Ampere",
+        "value": "500 Ohms",
         "right": false,
         "selected": false
     }, {
-        "value": "Ohms",
+        "value": "5000 Ohms",
         "right": true,
         "selected": false
     }],
     "selected": "3"
 }, {
     "type": "radio",
-    "question": "Rank the following numbers from the least resistance to the most resistance. 4 Ohm, 14 Ohm, 24 Ohm and 40 Ohm.",
-    "explanation": "High resistance means more ohms, low resistance means less ohms.",
+    "question": "abc",
+    "explanation": "cde",
     "options": [{
-        "value": "4, 14, 24, 40",
+        "value": "1",
+        "right": false,
+        "selected": false
+    }, {
+        "value": "2",
         "right": true,
         "selected": false
     }, {
-        "value": "4, 24, 40, 14",
+        "value": "3",
         "right": false,
         "selected": false
     }, {
-        "value": "40, 24, 14, 4",
-        "right": false,
-        "selected": false
-    }, {
-        "value": "14, 24, 4, 40",
+        "value": "4",
         "right": false,
         "selected": false
     }],
-    "selected": "0"
+    "selected": "1"
 }, {
     "type": "radio",
-    "question": "If resistance increases and voltage stays the same, what will happen to the current?",
-    "explanation": "Ohms law states that I = V/R so if V stays the same and R increases I will decrease.",
+    "question": "abc",
+    "explanation": "cde",
     "options": [{
-        "value": "Increase",
+        "value": "1",
         "right": false,
         "selected": false
     }, {
-        "value": "Decrease",
+        "value": "2",
         "right": true,
         "selected": false
     }, {
-        "value": "Stay the same",
+        "value": "3",
         "right": false,
         "selected": false
     }, {
-        "value": "Become Zero",
+        "value": "4",
         "right": false,
         "selected": false
     }],
