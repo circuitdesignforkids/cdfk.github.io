@@ -137,7 +137,10 @@
                 let rightBoxContents = rightBox.getAttribute("contains");
                 if ((leftBoxContents == "battUp" && midBoxContents == "resistorLow" && rightBoxContents == "lightbulb") ||
                     (leftBoxContents == "battUp" && midBoxContents == "resistorMed" && rightBoxContents == "lightbulb") ||
-                    (leftBoxContents == "battUp" && midBoxContents == "resistorHigh" && rightBoxContents == "lightbulb")) {
+                    (leftBoxContents == "battUp" && midBoxContents == "resistorHigh" && rightBoxContents == "lightbulb") ||
+                    (leftBoxContents == "lightbulb" && midBoxContents == "resistorLow" && rightBoxContents == "battUp") ||
+                    (leftBoxContents == "lightbulb" && midBoxContents == "resistorMed" && rightBoxContents == "battUp") ||
+                    (leftBoxContents == "lightbulb" && midBoxContents == "resistorHigh" && rightBoxContents == "battUp")) {
                     circuitIsCorrect = true;
                 }
                 else {
