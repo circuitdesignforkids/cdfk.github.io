@@ -98,7 +98,7 @@ h1 {
     font-weight: 600;
     line-height: normal;
     font-size: 36pt;
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 
 .surveyrectangle {
@@ -108,7 +108,7 @@ h1 {
     border-radius: 30px;
     background: #A349A3;
     position: fixed;
-    top: 95%;
+    top: 90%;
     left: 50%;
     margin-top: -10.5%;
     margin-left: -10%;
