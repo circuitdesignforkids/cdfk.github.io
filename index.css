@@ -19,7 +19,6 @@ h1 {
 
 #chooselevelblurb {
     width: 980px;
-    /* height: 294px; */
     position: fixed;
     top: 20%;
     left: 50%;
@@ -38,7 +37,7 @@ h1 {
     height: 25%;
     border: none;
     border-radius: 30px;
-    background: #B29EB2;
+    background: #A349A3;
     position: absolute;
     top: 65%;
     left: 25%;
@@ -60,7 +59,7 @@ h1 {
     height: 25%;
     border: none;
     border-radius: 30px;
-    background: #A349A3;
+    background: #87c501;
     position: fixed;
     top: 65%;
     left: 50%;
@@ -106,7 +105,7 @@ h1 {
     height: 25%;
     border: none;
     border-radius: 30px;
-    background: #A349A3;
+    background: #B29EB2;
     position: fixed;
     top: 90%;
     left: 50%;
