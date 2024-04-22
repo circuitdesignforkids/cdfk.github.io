@@ -177,22 +177,22 @@ var data = [{
     "selected": "3"
 }, {
     "type": "radio",
-    "question": "abc",
-    "explanation": "cde",
+    "question": "What is the current(I) of a circuit with a voltage(V) of 10 volts and a resistance(R) of 2 ohms?",
+    "explanation": "Current(I) equals voltage(V) divided by resistance(R), 10 V divided by 2 ohms is 5 amps.",
     "options": [{
-        "value": "1",
+        "value": "1 amp",
         "right": false,
         "selected": false
     }, {
-        "value": "2",
+        "value": "2 amps",
+        "right": false,
+        "selected": false
+    }, {
+        "value": "5 amps",
         "right": true,
         "selected": false
     }, {
-        "value": "3",
-        "right": false,
-        "selected": false
-    }, {
-        "value": "4",
+        "value": "8 amps",
         "right": false,
         "selected": false
     }],
@@ -220,46 +220,38 @@ var data = [{
     }],
     "selected": "3"
 }, {
-    "type": "radio",
-    "question": "abc",
-    "explanation": "cde",
+    "type": "checkbox",
+    "question": "Identify Ohm's Law and all of its variations. Select all that apply.",
+    "explanation": "Ohm's law and its variations are V = I x R, I = V / R, and R = V / I.",
     "options": [{
-        "value": "1",
-        "right": false,
-        "selected": false
-    }, {
-        "value": "2",
+        "value": "V = I x R",
         "right": true,
         "selected": false
     }, {
-        "value": "3",
+        "value": "I = V x R",
         "right": false,
         "selected": false
     }, {
-        "value": "4",
-        "right": false,
+        "value": "I = V / R",
+        "right": true,
+        "selected": false
+    }, {
+        "value": "R = V / I",
+        "right": true,
         "selected": false
     }],
     "selected": "1"
 }, {
     "type": "radio",
-    "question": "abc",
-    "explanation": "cde",
+    "question": "A 4-watt light bulb would shine brighter than a 14-watt light bulb.",
+    "explanation": "False because a 14-watt light bulb consumes more power than a 4-watt light bulb. Typically, brightness increases as power increases.",
     "options": [{
-        "value": "1",
+        "value": "True",
         "right": false,
         "selected": false
-    }, {
-        "value": "2",
+    },  {
+        "value": "False",
         "right": true,
-        "selected": false
-    }, {
-        "value": "3",
-        "right": false,
-        "selected": false
-    }, {
-        "value": "4",
-        "right": false,
         "selected": false
     }],
     "selected": "1"
